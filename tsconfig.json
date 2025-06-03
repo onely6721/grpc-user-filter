@@ -20,5 +20,7 @@
     "paths": {
       "@proto": ["libs/proto/src/index.ts"],
     }
-  }
+  },
+  "include": ["apps/**/*", "libs/**/*"],
+  "exclude": ["node_modules", "dist"]
 }

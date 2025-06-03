@@ -16,5 +16,6 @@ async function bootstrap() {
     },
   );
   await app.listen();
+  console.log('Producer service is listening on 0.0.0.0:50051');
 }
 bootstrap();

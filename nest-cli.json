@@ -3,7 +3,15 @@
   "collection": "@nestjs/schematics",
   "sourceRoot": "apps/producer/src",
   "compilerOptions": {
-    "deleteOutDir": true
+    "deleteOutDir": true,
+    "webpack": false,
+    "tsConfigPath": "tsconfig.json",
+    "assets": [
+      {
+        "include": "**/*.proto",
+        "watchAssets": true
+      }
+    ]
   },
   "monorepo": true,
   "root": "apps/producer",
@@ -24,6 +32,15 @@
       "sourceRoot": "apps/producer/src",
       "compilerOptions": {
         "tsConfigPath": "apps/producer/tsconfig.app.json"
+      }
+    },
+    "proto": {
+      "type": "library",
+      "root": "libs/proto",
+      "entryFile": "index",
+      "sourceRoot": "libs/proto/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/proto/tsconfig.lib.json"
       }
     }
   }

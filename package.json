@@ -8,8 +8,8 @@
   "scripts": {
     "build": "nest build",
     "format": "prettier --write \"apps/**/*.ts\" \"libs/**/*.ts\"",
-    "start:producer": "ts-node -r tsconfig-paths/register apps/producer/src/main.ts",
-    "start:consumer": "ts-node -r tsconfig-paths/register apps/consumer/src/main.ts",
+    "start:producer": "node dist/apps/producer/main.js",
+    "start:consumer": "node dist/apps/consumer/main.js",
     "gen:proto": "protoc --plugin=protoc-gen-ts_proto=node_modules\\.bin\\protoc-gen-ts_proto.cmd --ts_proto_out=libs/proto/src --ts_proto_opt=nestJs=true,outputServices=grpc-js,useObservable=true,useOptionals=1 --proto_path=libs/proto libs/proto/*.proto"
   },
   "dependencies": {
@@ -45,9 +45,7 @@
     "supertest": "^7.0.0",
     "ts-jest": "^29.2.5",
     "ts-loader": "^9.5.2",
-    "ts-node": "^10.9.2",
     "ts-proto": "^2.7.2",
-    "tsconfig-paths": "^4.2.0",
     "typescript": "^5.8.3",
     "typescript-eslint": "^8.20.0"
   },

@@ -12,7 +12,7 @@ import { ConsumerService } from './consumer.service';
         options: {
           package: 'users',
           protoPath: join(process.cwd(), 'libs/proto/users.proto'),
-          url: 'localhost:50051',
+          url: 'producer:50051',
         },
       },
     ]),
