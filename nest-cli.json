@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/grpc-filtering/src",
+  "compilerOptions": {
+    "deleteOutDir": true,
+    "webpack": true,
+    "tsConfigPath": "apps/grpc-filtering/tsconfig.app.json"
+  },
+  "monorepo": true,
+  "root": "apps/grpc-filtering",
+  "projects": {
+    "consumer": {
+      "type": "application",
+      "root": "apps/consumer",
+      "entryFile": "main",
+      "sourceRoot": "apps/consumer/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/consumer/tsconfig.app.json"
+      }
+    },
+    "grpc-filtering": {
+      "type": "application",
+      "root": "apps/grpc-filtering",
+      "entryFile": "main",
+      "sourceRoot": "apps/grpc-filtering/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/grpc-filtering/tsconfig.app.json"
+      }
+    },
+    "producer": {
+      "type": "application",
+      "root": "apps/producer",
+      "entryFile": "main",
+      "sourceRoot": "apps/producer/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/producer/tsconfig.app.json"
+      }
+    }
+  }
+}
