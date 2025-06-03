@@ -24,8 +24,6 @@ This project consists of two NestJS microservices — **Producer** and **Consume
 # Install dependencies
 npm install
 
-# Generate gRPC types
-npm run proto:gen
 ```
 
 ## 🚀 Running 
