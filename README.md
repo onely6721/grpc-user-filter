@@ -31,7 +31,7 @@ npm install
 ### 1. Start the Producer (gRPC server)
 
 ```bash
-npm run start:dev producer
+npm run start producer
 ```
 
 This will run the Producer microservice at `localhost:50051`.
@@ -41,7 +41,7 @@ This will run the Producer microservice at `localhost:50051`.
 In another terminal:
 
 ```bash
-npm run start:dev consumer
+npm run start consumer
 ```
 
 The Consumer will call the gRPC method and log filtered users to the console.
